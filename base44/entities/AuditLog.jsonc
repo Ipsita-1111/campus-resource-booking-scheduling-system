@@ -1,0 +1,51 @@
+{
+  "name": "AuditLog",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "BOOKING_CREATED",
+        "BOOKING_APPROVED",
+        "BOOKING_REJECTED",
+        "BOOKING_CONFLICTED",
+        "BOOKING_CANCELLED",
+        "BOOKING_COMPLETED",
+        "RESOURCE_CREATED",
+        "RESOURCE_UPDATED",
+        "RESOURCE_BLOCKED",
+        "TIMETABLE_CREATED",
+        "TIMETABLE_UPDATED",
+        "USER_ROLE_CHANGED",
+        "APPROVAL_RULE_UPDATED"
+      ]
+    },
+    "booking_id": {
+      "type": "string"
+    },
+    "resource_id": {
+      "type": "string"
+    },
+    "previous_status": {
+      "type": "string"
+    },
+    "new_status": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "action"
+  ]
+}

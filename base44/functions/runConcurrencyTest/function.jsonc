@@ -1,0 +1,4 @@
+{
+  "name": "runConcurrencyTest",
+  "entry": "entry.ts"
+}

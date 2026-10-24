@@ -1,0 +1,44 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "booking_id": {
+      "type": "string"
+    },
+    "resource_id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "BOOKING_SUBMITTED",
+        "BOOKING_APPROVED",
+        "BOOKING_REJECTED",
+        "BOOKING_CONFLICTED",
+        "BOOKING_CANCELLED",
+        "APPROVAL_REQUIRED",
+        "RECURRING_CONFLICT",
+        "SCHEDULE_CHANGE"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "user_id",
+    "type",
+    "title",
+    "message"
+  ]
+}

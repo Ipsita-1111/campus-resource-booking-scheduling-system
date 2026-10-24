@@ -1,0 +1,31 @@
+{
+  "name": "FacultyCertification",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "certification_name": {
+      "type": "string"
+    },
+    "resource_type": {
+      "type": "string",
+      "enum": [
+        "CLASSROOM",
+        "LABORATORY",
+        "SEMINAR_HALL"
+      ]
+    },
+    "issued_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "user_id",
+    "certification_name"
+  ]
+}

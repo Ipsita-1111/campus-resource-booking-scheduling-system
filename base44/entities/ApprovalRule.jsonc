@@ -1,0 +1,56 @@
+{
+  "name": "ApprovalRule",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "resource_type": {
+      "type": "string",
+      "enum": [
+        "CLASSROOM",
+        "LABORATORY",
+        "SEMINAR_HALL"
+      ]
+    },
+    "user_role": {
+      "type": "string",
+      "enum": [
+        "STUDENT",
+        "FACULTY",
+        "ADMINISTRATOR"
+      ]
+    },
+    "requires_approval": {
+      "type": "boolean",
+      "default": true
+    },
+    "auto_approve": {
+      "type": "boolean",
+      "default": false
+    },
+    "approver_role": {
+      "type": "string",
+      "enum": [
+        "FACULTY",
+        "ADMINISTRATOR"
+      ]
+    },
+    "requires_supervising_faculty": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "resource_type",
+    "user_role"
+  ]
+}

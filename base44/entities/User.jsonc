@@ -1,0 +1,25 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "campus_role": {
+      "type": "string",
+      "enum": [
+        "STUDENT",
+        "FACULTY",
+        "ADMINISTRATOR"
+      ],
+      "default": "STUDENT"
+    },
+    "department": {
+      "type": "string"
+    },
+    "employee_id": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    }
+  },
+  "required": []
+}

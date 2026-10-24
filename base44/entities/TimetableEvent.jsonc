@@ -1,0 +1,65 @@
+{
+  "name": "TimetableEvent",
+  "type": "object",
+  "properties": {
+    "resource_id": {
+      "type": "string"
+    },
+    "resource_name": {
+      "type": "string"
+    },
+    "course_name": {
+      "type": "string"
+    },
+    "course_code": {
+      "type": "string"
+    },
+    "faculty_id": {
+      "type": "string"
+    },
+    "faculty_name": {
+      "type": "string"
+    },
+    "day_of_week": {
+      "type": "number"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "specific_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "semester": {
+      "type": "string"
+    },
+    "academic_year": {
+      "type": "string"
+    },
+    "recurrence": {
+      "type": "string",
+      "enum": [
+        "WEEKLY",
+        "ONE_TIME"
+      ],
+      "default": "WEEKLY"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "CANCELLED"
+      ],
+      "default": "ACTIVE"
+    }
+  },
+  "required": [
+    "resource_id",
+    "course_name",
+    "start_time",
+    "end_time"
+  ]
+}

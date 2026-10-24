@@ -1,0 +1,39 @@
+{
+  "name": "ResourceBlock",
+  "type": "object",
+  "properties": {
+    "resource_id": {
+      "type": "string"
+    },
+    "resource_name": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "block_type": {
+      "type": "string",
+      "enum": [
+        "MAINTENANCE",
+        "ADMINISTRATIVE",
+        "HOLIDAY"
+      ],
+      "default": "ADMINISTRATIVE"
+    },
+    "created_by_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "resource_id",
+    "reason",
+    "start_time",
+    "end_time"
+  ]
+}

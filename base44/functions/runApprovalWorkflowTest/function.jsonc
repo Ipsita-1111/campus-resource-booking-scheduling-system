@@ -1,0 +1,4 @@
+{
+  "name": "runApprovalWorkflowTest",
+  "entry": "entry.ts"
+}

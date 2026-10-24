@@ -1,0 +1,106 @@
+{
+  "name": "Booking",
+  "type": "object",
+  "properties": {
+    "resource_id": {
+      "type": "string"
+    },
+    "resource_name": {
+      "type": "string"
+    },
+    "resource_type": {
+      "type": "string",
+      "enum": [
+        "CLASSROOM",
+        "LABORATORY",
+        "SEMINAR_HALL"
+      ]
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "expected_attendance": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "APPROVED",
+        "REJECTED",
+        "CONFLICTED",
+        "CANCELLED",
+        "EXPIRED",
+        "COMPLETED"
+      ],
+      "default": "PENDING"
+    },
+    "required_approver_role": {
+      "type": "string",
+      "enum": [
+        "FACULTY",
+        "ADMINISTRATOR"
+      ],
+      "default": "ADMINISTRATOR"
+    },
+    "supervising_faculty_id": {
+      "type": "string"
+    },
+    "supervising_faculty_name": {
+      "type": "string"
+    },
+    "recurring_series_id": {
+      "type": "string"
+    },
+    "rejection_reason": {
+      "type": "string"
+    },
+    "conflict_reason": {
+      "type": "string"
+    },
+    "conflicted_booking_id": {
+      "type": "string"
+    },
+    "approved_by_id": {
+      "type": "string"
+    },
+    "approved_by_name": {
+      "type": "string"
+    },
+    "approved_date": {
+      "type": "string"
+    },
+    "auto_approved": {
+      "type": "boolean",
+      "default": false
+    },
+    "idempotency_key": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "resource_id",
+    "user_id",
+    "start_time",
+    "end_time"
+  ]
+}

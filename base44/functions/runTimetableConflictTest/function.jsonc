@@ -1,0 +1,4 @@
+{
+  "name": "runTimetableConflictTest",
+  "entry": "entry.ts"
+}

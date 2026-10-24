@@ -1,0 +1,97 @@
+{
+  "name": "Resource",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "resource_type": {
+      "type": "string",
+      "enum": [
+        "CLASSROOM",
+        "LABORATORY",
+        "SEMINAR_HALL"
+      ]
+    },
+    "building": {
+      "type": "string"
+    },
+    "floor": {
+      "type": "number"
+    },
+    "room_number": {
+      "type": "string"
+    },
+    "capacity": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "availability_status": {
+      "type": "string",
+      "enum": [
+        "AVAILABLE",
+        "UNAVAILABLE",
+        "MAINTENANCE"
+      ],
+      "default": "AVAILABLE"
+    },
+    "open_time": {
+      "type": "string"
+    },
+    "close_time": {
+      "type": "string"
+    },
+    "equipment_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "restrictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "requires_approval": {
+      "type": "boolean",
+      "default": true
+    },
+    "supervising_faculty_id": {
+      "type": "string"
+    },
+    "supervising_faculty_name": {
+      "type": "string"
+    },
+    "requires_supervising_faculty": {
+      "type": "boolean",
+      "default": false
+    },
+    "required_supervisor_qualification": {
+      "type": "string"
+    },
+    "required_certification_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "lock_held_by": {
+      "type": "string"
+    },
+    "lock_held_until": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "resource_type",
+    "building",
+    "capacity"
+  ]
+}

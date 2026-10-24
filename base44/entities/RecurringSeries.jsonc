@@ -1,0 +1,90 @@
+{
+  "name": "RecurringSeries",
+  "type": "object",
+  "properties": {
+    "resource_id": {
+      "type": "string"
+    },
+    "resource_name": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "day_of_week": {
+      "type": "number"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "expected_attendance": {
+      "type": "number"
+    },
+    "supervising_faculty_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "PARTIALLY_APPROVED",
+        "APPROVED",
+        "REJECTED",
+        "CONFLICTED"
+      ],
+      "default": "PENDING"
+    },
+    "total_occurrences": {
+      "type": "number"
+    },
+    "approved_occurrences": {
+      "type": "number"
+    },
+    "conflicted_occurrences": {
+      "type": "number"
+    },
+    "conflict_policy": {
+      "type": "string",
+      "enum": [
+        "REJECT_ALL_ON_CONFLICT",
+        "APPROVE_NON_CONFLICTING"
+      ],
+      "default": "APPROVE_NON_CONFLICTING"
+    },
+    "conflicted_dates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "resource_id",
+    "user_id",
+    "start_date",
+    "end_date",
+    "day_of_week",
+    "start_time",
+    "end_time"
+  ]
+}
